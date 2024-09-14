@@ -1,10 +1,13 @@
-package AnimalShelter;
+package AnimalShelter.management;
+
+import AnimalShelter.animal.Animal;
+import AnimalShelter.AnimalType.*;
 
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-class Kennel {
+public class Kennel {
     private List<Animal> animals;
 
     public Kennel() {

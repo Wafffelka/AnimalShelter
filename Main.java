@@ -1,5 +1,8 @@
 package AnimalShelter;
 
+import AnimalShelter.management.Kennel;
+import AnimalShelter.Counter.Counter;
+
 import java.util.Scanner;
 
 public class Main {
@@ -8,9 +11,9 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         // Добавим несколько животных для примера
-        kennel.addAnimal("dog", "Buddy", "01-01-2020");
-        kennel.addAnimal("cat", "Whiskers", "05-03-2019");
-        kennel.addAnimal("horse", "Spirit", "10-10-2015");
+        kennel.addAnimal("cобака", "Бобби", "01-01-2020");
+        kennel.addAnimal("кошка", "Виски", "05-03-2019");
+        kennel.addAnimal("лошадь", "Призрак", "10-10-2015");
 
         boolean running = true;
         while (running) {
@@ -22,17 +25,28 @@ public class Main {
             System.out.println("5. Выход\n");
 
             int choice = scanner.nextInt();
-            scanner.nextLine(); // consume the newline
+            scanner.nextLine();
 
             switch (choice) {
                 case 1:
-                    System.out.print("Введите тип животного (собака, кошка, хомяк, лошадь, верблюд, осел): ");
-                    String type = scanner.nextLine();
-                    System.out.print("Введите имя животного: ");
-                    String name = scanner.nextLine();
-                    System.out.print("Введите день рождения (дд-мм-гггг): ");
-                    String birthDate = scanner.nextLine();
-                    kennel.addAnimal(type, name, birthDate);
+                    try (Counter counter = new Counter()) {
+                        System.out.print("Введите тип животного (собака, кошка, хомяк, лошадь, верблюд, осел): ");
+                        String type = scanner.nextLine().trim();;
+                        System.out.print("Введите имя животного: ");
+                        String name = scanner.nextLine().trim();;
+                        System.out.print("Введите день рождения (дд-мм-гггг): ");
+                        String birthDate = scanner.nextLine().trim();;
+                        kennel.addAnimal(type, name, birthDate);
+
+                        if (!type.isEmpty() && !name.isEmpty() && !birthDate.isEmpty()) {
+                            kennel.addAnimal(type, name, birthDate);
+                            counter.add();
+                        } else {
+                            System.out.println("Для добавления нового животного все поля должны быть заполнены.");
+                        }
+                    } catch (IllegalStateException e) {
+                        System.out.println("Ошибка: " + e.getMessage());
+                    }
                     break;
                 case 2:
                     kennel.printAllAnimals();
