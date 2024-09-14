@@ -1,5 +1,4 @@
-import AnimalShelter.Pet;
-
+package AnimalShelter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,48 +34,6 @@ public abstract class Animal {
         System.out.println("Name: " + name);
         System.out.println("Birth Date: " + birthDate);
         System.out.println("Commands: " + commands);
-    }
-}
-
-// Класс для собак
-class Dog extends Pet {
-    public Dog(String name, String birthDate) {
-        super(name, birthDate);
-    }
-}
-
-// Класс для кошек
-class Cat extends Pet {
-    public Cat(String name, String birthDate) {
-        super(name, birthDate);
-    }
-}
-
-// Класс для хомяков
-class Hamster extends Pet {
-    public Hamster(String name, String birthDate) {
-        super(name, birthDate);
-    }
-}
-
-// Класс для лошадей
-class Horse extends PackAnimal {
-    public Horse(String name, String birthDate) {
-        super(name, birthDate);
-    }
-}
-
-// Класс для верблюдов
-class Camel extends PackAnimal {
-    public Camel(String name, String birthDate) {
-        super(name, birthDate);
-    }
-}
-
-// Класс для ослов
-class Donkey extends PackAnimal {
-    public Donkey(String name, String birthDate) {
-        super(name, birthDate);
     }
 }
 
