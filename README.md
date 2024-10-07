@@ -59,3 +59,10 @@
     блоке try-with-resources. Нужно бросить исключение, если работа с объектом
     типа счетчик была не в ресурсном try и/или ресурс остался открыт. Значение
     считать в ресурсе try, если при заведения животного заполнены все поля.
+
+Пример выполнения программы:
+![exampl_1.jpg](images%2Fexampl_1.jpg)
+![exampl_2.jpg](images%2Fexampl_2.jpg)
+![exampl_3.jpg](images%2Fexampl_3.jpg)
+![exampl_4.jpg](images%2Fexampl_4.jpg)
+![exampl_5.jpg](images%2Fexampl_5.jpg)
