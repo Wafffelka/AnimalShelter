@@ -11,7 +11,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         // Добавим несколько животных для примера
-        kennel.addAnimal("cобака", "Бобби", "01-01-2020");
+        kennel.addAnimal("собака", "Бобби", "01-01-2020");
         kennel.addAnimal("кошка", "Виски", "05-03-2019");
         kennel.addAnimal("лошадь", "Призрак", "10-10-2015");
 
@@ -35,8 +35,7 @@ public class Main {
                         System.out.print("Введите имя животного: ");
                         String name = scanner.nextLine().trim();;
                         System.out.print("Введите день рождения (дд-мм-гггг): ");
-                        String birthDate = scanner.nextLine().trim();;
-                        kennel.addAnimal(type, name, birthDate);
+                        String birthDate = scanner.nextLine().trim();
 
                         if (!type.isEmpty() && !name.isEmpty() && !birthDate.isEmpty()) {
                             kennel.addAnimal(type, name, birthDate);

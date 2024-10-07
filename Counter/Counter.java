@@ -14,7 +14,7 @@ public class Counter implements AutoCloseable {
             throw new IllegalStateException("Счет закрыт. Добавление невозможно.");
         }
         count++;
-        System.out.println("Счет увеличен. Текущее значение: " + count);
+        //System.out.println("Счет увеличен. Текущее значение: " + count);
     }
 
     public int getCount() {
@@ -27,7 +27,7 @@ public class Counter implements AutoCloseable {
             throw new IllegalStateException("Счет уже был окончен.");
         }
         closed = true;
-        System.out.println("Счет закрыт.");
+        //System.out.println("Счет закрыт.");
     }
 
     public boolean isClosed() {

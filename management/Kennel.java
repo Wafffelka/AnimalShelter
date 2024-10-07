@@ -46,7 +46,7 @@ public class Kennel {
         }
 
         addAnimal(newAnimal);
-        System.out.println(type + " имя " + name + " было найдено.");
+        System.out.println(type + " с именем " + name + " был(а) добавлен(а).");
     }
 
     public void printAllAnimals() {
@@ -86,7 +86,7 @@ public class Kennel {
 
     public void printAnimalsByBirthDate() {
         animals.sort(Comparator.comparing(Animal::getBirthDate));
-        System.out.println("Животные отсортированные по дате рождения::");
+        System.out.println("Животные отсортированные по дате рождения: ");
         printAllAnimals();
     }
 }
